@@ -37,6 +37,8 @@
       6: { open: "10:30 AM", close: "9:00 PM", closed: false }, // Saturday
     },
     hoursSummary: "Mon - Thu 11:00 AM - 9:00 PM | Fri - Sun 10:30 AM - 9:00 PM",
+    /** Shown in footer brand column (replaces address + phone there) */
+    footerTagline: "Authentic Vietnamese flavors, simmered with care.",
   };
 
   function todayHoursLabel() {
@@ -187,14 +189,9 @@
       '<div class="footer__col footer__col--brand">' +
       '<a href="index.html" class="footer__brand-name">Pho Ngon</a>' +
       '<p class="footer__muted">Vietnamese Cuisine</p>' +
-      '<p class="footer__address">' +
-      escapeHtml(c.addressFull).replace(/\n/g, "<br />") +
+      '<p class="footer__tagline">' +
+      escapeHtml(PHONGON.footerTagline) +
       "</p>" +
-      '<p><a href="tel:' +
-      escapeHtml(c.phoneTel) +
-      '">' +
-      escapeHtml(c.phone) +
-      "</a></p>" +
       '<p><a href="mailto:' +
       escapeHtml(c.email) +
       '">' +
@@ -425,6 +422,52 @@
     });
   }
 
+  function initDishCarousel() {
+    var wrap = document.querySelector(".dish-carousel__wrap");
+    var el = document.getElementById("specialty-dishes-carousel");
+    if (!wrap || !el) return;
+    var prev = wrap.querySelector(".dish-carousel__btn--prev");
+    var next = wrap.querySelector(".dish-carousel__btn--next");
+    if (!prev || !next) return;
+
+    var mq = window.matchMedia("(max-width: 540px)");
+
+    function scrollPage(direction) {
+      var step = el.clientWidth;
+      if (!step) return;
+      el.scrollBy({ left: direction * step, behavior: "smooth" });
+    }
+
+    function updateArrows() {
+      if (!mq.matches) {
+        prev.disabled = false;
+        next.disabled = false;
+        return;
+      }
+      var maxScroll = el.scrollWidth - el.clientWidth;
+      var left = el.scrollLeft;
+      prev.disabled = left <= 0.5;
+      next.disabled = left >= maxScroll - 0.5;
+    }
+
+    prev.addEventListener("click", function () {
+      scrollPage(-1);
+    });
+    next.addEventListener("click", function () {
+      scrollPage(1);
+    });
+
+    el.addEventListener("scroll", updateArrows, { passive: true });
+    window.addEventListener("resize", updateArrows);
+    if (typeof mq.addEventListener === "function") {
+      mq.addEventListener("change", updateArrows);
+    } else if (typeof mq.addListener === "function") {
+      mq.addListener(updateArrows);
+    }
+
+    updateArrows();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     injectTopBar();
     injectHeader();
@@ -433,5 +476,6 @@
     initFooterAccordion();
     initScrollAnimations();
     initStatsCounter();
+    initDishCarousel();
   });
 })();

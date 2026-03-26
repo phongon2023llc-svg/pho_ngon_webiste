@@ -31,11 +31,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
+  /* Use 100% not 100vw — vw includes scrollbar width and can cause horizontal overflow + extra scrollbars */
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -46,6 +50,15 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 img {
@@ -109,10 +122,10 @@ img {
 }
 
 /* Stagger when multiple items reveal together */
-.dish-grid--animated .animate-on-scroll:nth-child(1) { transition-delay: 0.08s; }
-.dish-grid--animated .animate-on-scroll:nth-child(2) { transition-delay: 0.16s; }
-.dish-grid--animated .animate-on-scroll:nth-child(3) { transition-delay: 0.24s; }
-.dish-grid--animated .animate-on-scroll:nth-child(4) { transition-delay: 0.32s; }
+.dish-grid--animated .dish-carousel__page:nth-child(1) .animate-on-scroll:nth-child(1) { transition-delay: 0.08s; }
+.dish-grid--animated .dish-carousel__page:nth-child(1) .animate-on-scroll:nth-child(2) { transition-delay: 0.16s; }
+.dish-grid--animated .dish-carousel__page:nth-child(2) .animate-on-scroll:nth-child(1) { transition-delay: 0.24s; }
+.dish-grid--animated .dish-carousel__page:nth-child(2) .animate-on-scroll:nth-child(2) { transition-delay: 0.32s; }
 
 .cards--animated .animate-on-scroll:nth-child(1) { transition-delay: 0.08s; }
 .cards--animated .animate-on-scroll:nth-child(2) { transition-delay: 0.16s; }
@@ -1058,6 +1071,11 @@ h3 {
   margin-top: 48px;
 }
 
+/* Page wrappers: flatten into parent grid on tablet+ (not used on mobile carousel) */
+.dish-carousel__page {
+  display: contents;
+}
+
 @media (max-width: 1024px) {
   .dish-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1065,10 +1083,39 @@ h3 {
   }
 }
 
+/* Mobile: horizontal carousel — 2 dishes per view, swipe / scroll-snap */
 @media (max-width: 540px) {
-  .dish-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .section--dishes .dish-carousel__wrap {
+    margin-top: 32px;
+  }
+
+  .dish-carousel__btn {
+    display: flex;
+  }
+
+  .section--dishes .dish-grid.dish-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    padding-bottom: 12px;
+    scrollbar-width: thin;
+  }
+
+  .section--dishes .dish-carousel .dish-carousel__page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    min-width: 100%;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
 }
 
@@ -1126,16 +1173,86 @@ h3 {
 }
 
 /* Signature dishes — slightly more compact cards */
-.section--dishes .dish-grid {
+.section--dishes .dish-carousel__wrap {
+  position: relative;
   max-width: 920px;
   margin-left: auto;
   margin-right: auto;
-  gap: 20px;
   margin-top: 40px;
 }
 
+.section--dishes .dish-carousel__wrap .dish-grid {
+  margin-top: 0;
+}
+
+.section--dishes .dish-grid {
+  gap: 20px;
+}
+
+.section--dishes .dish-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.section--dishes .dish-card__media {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #141414;
+  flex-shrink: 0;
+}
+
 .section--dishes .dish-card__img {
-  aspect-ratio: 5 / 6;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: unset;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.dish-carousel__btn {
+  display: none;
+  position: absolute;
+  top: 42%;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  background: rgba(26, 26, 26, 0.92);
+  color: #f5f5f5;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: background 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.dish-carousel__btn:hover:not(:disabled) {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.dish-carousel__btn:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+.dish-carousel__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.dish-carousel__btn--prev {
+  left: 6px;
+}
+
+.dish-carousel__btn--next {
+  right: 6px;
 }
 
 .section--dishes .dish-card__body {
@@ -1521,6 +1638,18 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+
+/* About / split — under star rating & years stats */
+.review-btn-wrap--split {
+  margin: 24px 0 0;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .review-btn-wrap--split {
+    text-align: center;
+  }
 }
 
 /* Menu */
@@ -1991,10 +2120,13 @@ h3 {
   color: var(--muted);
 }
 
-.footer__address,
-.footer p.footer__address {
-  color: #dfc98a;
-  text-shadow: 0 0 20px rgba(196, 167, 71, 0.12);
+.footer__tagline {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0 auto 16px;
+  max-width: 28ch;
+  font-style: italic;
 }
 
 .footer a {
@@ -2043,11 +2175,6 @@ h3 {
   padding-top: 24px;
   border-top: 1px solid #222;
   text-shadow: 0 0 24px rgba(196, 167, 71, 0.2);
-}
-
-.review-btn-wrap {
-  text-align: center;
-  margin: 24px 0 48px;
 }
 
 /* Order page — horizontal padding matches gallery */
