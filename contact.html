@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Pho Ngon | 87 E Germantown Pike Norristown PA 19401 | (610) 290-7045</title>
+    <meta name="description" content="Visit Pho Ngon Vietnamese Restaurant at 87 E Germantown Pike, Norristown PA 19401. Call (610) 290-7045. Open Mon-Thu 11AM-9PM, Fri-Sun 10:30AM-9PM. Directions & hours." />
+    <meta name="keywords" content="Pho Ngon location, Vietnamese restaurant Germantown Pike, 87 E Germantown Pike Norristown, Vietnamese food near me, Pho Ngon hours, Pho Ngon phone number, directions to Pho Ngon" />
+    <link rel="canonical" href="https://www.phongon.com/contact.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+      window.PHONGON_ACTIVE_PAGE = "contact.html";
+    </script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div id="top-bar-root"></div>
+    <div id="site-header"></div>
+
+    <main>
+      <section class="section section--tight section--contact">
+        <p class="eyebrow">Visit Us</p>
+        <h1 class="section__title">Contact Pho Ngon - Vietnamese Restaurant in Norristown</h1>
+        <p class="section__subtitle">
+          Located at 87 E Germantown Pike, Norristown PA 19401. We would love to see you! Call ahead for takeout, order online for delivery, or find us on the map for directions.
+        </p>
+
+        <div class="cards" id="contact-cards"></div>
+
+        <div class="review-btn-wrap">
+          <a class="btn btn--ghost" href="#" id="review-link" target="_blank" rel="noopener">
+            ★ Leave us a review on Google
+          </a>
+        </div>
+
+        <div class="map-wrap">
+          <iframe
+            id="map-iframe"
+            title="Pho Ngon location"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="about:blank"
+          ></iframe>
+          <a
+            class="map-locate js-maps-link"
+            href="#"
+            id="maps-link"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open directions to Pho Ngon in Google Maps"
+          >
+            <span class="map-locate__pin" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </span>
+            <span class="map-locate__body">
+              <span class="map-locate__name">Pho Ngon</span>
+              <span class="map-locate__address js-map-address"></span>
+            </span>
+            <span class="map-locate__action">Directions</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var c = window.PHONGON && window.PHONGON.CONTACT;
+        if (!c) return;
+
+        var cards = document.getElementById("contact-cards");
+        if (cards) {
+          cards.innerHTML =
+            '<article class="info-card">' +
+            '<div class="info-card__icon" aria-hidden="true">' +
+            '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+            "</div>" +
+            '<h2 class="info-card__title">Location</h2>' +
+            '<p class="info-card__body">' +
+            c.addressFull.replace(/\n/g, "<br />") +
+            "</p></article>" +
+            '<article class="info-card">' +
+            '<div class="info-card__icon" aria-hidden="true">' +
+            '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>' +
+            "</div>" +
+            '<h2 class="info-card__title">Phone</h2>' +
+            '<p class="info-card__body"><a href="tel:' +
+            c.phoneTel +
+            '">' +
+            c.phone +
+            "</a></p></article>" +
+            '<article class="info-card">' +
+            '<div class="info-card__icon" aria-hidden="true">' +
+            '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' +
+            "</div>" +
+            '<h2 class="info-card__title">Hours</h2>' +
+            '<p class="info-card__body">' +
+            (window.PHONGON.hoursSummary || "") +
+            "</p></article>";
+        }
+
+        var review = document.getElementById("review-link");
+        if (review) review.href = c.reviewUrl;
+
+        document.querySelectorAll(".js-maps-link").forEach(function (el) {
+          el.href = c.mapsUrl;
+        });
+        document.querySelectorAll(".js-map-address").forEach(function (el) {
+          el.textContent = c.addressFull;
+        });
+
+        var iframe = document.getElementById("map-iframe");
+        if (iframe) {
+          iframe.src =
+            "https://www.google.com/maps?q=" +
+            encodeURIComponent(c.mapsEmbedQuery || c.addressFull) +
+            "&output=embed";
+        }
+      });
+    </script>
+  </body>
+</html>
