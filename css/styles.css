@@ -1686,6 +1686,57 @@ h3 {
   }
 }
 
+/* Full menu page — background photo + readable overlay */
+.page-full-menu #top-bar-root {
+  position: relative;
+  z-index: 50;
+}
+
+.page-full-menu #site-header {
+  position: relative;
+  z-index: 100;
+}
+
+.page-full-menu main {
+  position: relative;
+  z-index: 1;
+}
+
+.page-full-menu #site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.page-full-menu .full-menu-page__bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #0a0a0a;
+  background-image: url("../images/pho_ngon_hero_image2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.55);
+}
+
+.page-full-menu .full-menu-page__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(0, 0, 0, 0.72) 45%,
+    rgba(0, 0, 0, 0.84) 100%
+  );
+}
+
+.page-full-menu .full-menu-page__section {
+  position: relative;
+  z-index: 1;
+}
+
 /* Menu */
 .menu-category {
   margin-bottom: 16px;
@@ -2015,6 +2066,13 @@ h3 {
   .footer__grid {
     gap: 0;
     margin-bottom: 28px;
+  }
+}
+
+/* Home: fixed bottom bar (address + phone) sits above footer — keep copyright scroll-clear */
+@media (max-width: 900px) {
+  .page-home .footer {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
   }
 }
 
