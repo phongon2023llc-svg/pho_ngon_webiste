@@ -1003,10 +1003,14 @@ h3 {
   filter: brightness(0.45);
 }
 
+/* Home hero on phones/tablets: show more of the photo (bowl, chopsticks) — cover crops too tight */
 @media (max-width: 768px) {
-  .hero__bg {
-    background-position: 40% center;
-    background-size: cover;
+  .page-home .hero__bg {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #0a0a0a;
+    filter: brightness(0.5);
   }
 }
 
