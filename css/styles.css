@@ -978,20 +978,20 @@ h3 {
 }
 
 @media (max-width: 480px) {
-  .page-home .hero__actions .btn {
-    max-width: 100%;
-    padding: 9px 16px;
-    min-height: 40px;
-  }
-
   .page-home .hero__actions {
     flex-direction: column;
     align-items: center;
+    gap: 8px;
   }
 
+  /* Phones: smaller than global .btn — hero CTAs only */
   .page-home .hero__actions .btn {
-    max-width: 280px;
-    width: 100%;
+    width: auto;
+    max-width: min(200px, 72vw);
+    padding: 7px 14px;
+    min-height: 34px;
+    font-size: 8px;
+    letter-spacing: 0.11em;
   }
 }
 
@@ -1445,17 +1445,6 @@ h3 {
     font-size: 1.75rem;
   }
 
-  .info-card__icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 16px;
-  }
-
-  .info-card__icon svg {
-    width: 20px;
-    height: 20px;
-  }
-
   .info-card__title {
     font-size: 11px;
     margin-bottom: 10px;
@@ -1508,18 +1497,6 @@ h3 {
 
 .info-card {
   text-align: center;
-}
-
-.info-card__icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 20px;
-  border: 1px solid var(--red);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--red);
 }
 
 .info-card__title {
