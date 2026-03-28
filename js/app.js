@@ -204,11 +204,9 @@
       "</button>" +
       '<div class="menu-category__content footer-accordion__content" id="footer-panel-nav">' +
       '<ul class="footer__list">' +
-      '<li><a href="index.html">Home</a></li>' +
       '<li><a href="about.html">About</a></li>' +
       '<li><a href="full-menu.html">Full Menu</a></li>' +
       '<li><a href="gallery.html">Gallery</a></li>' +
-      '<li><a href="contact.html">Contact</a></li>' +
       "</ul></div></div>" +
       '<div class="footer__accordion menu-category">' +
       '<button type="button" class="menu-category__header footer-accordion__header" aria-expanded="false" aria-controls="footer-panel-order">' +

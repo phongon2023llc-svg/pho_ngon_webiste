@@ -38,8 +38,10 @@ html {
   scroll-behavior: smooth;
   /* Use 100% not 100vw — vw includes scrollbar width and can cause horizontal overflow + extra scrollbars */
   overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
   max-width: 100%;
+  height: 100%;
 }
 
 body {
@@ -706,7 +708,7 @@ a:hover {
   }
 
   .section--dishes {
-    padding: 64px var(--spacing-mobile);
+    padding: 84px var(--spacing-mobile);
   }
 }
 
@@ -777,7 +779,7 @@ h3 {
 /* Hero */
 .hero {
   position: relative;
-  min-height: min(78vh, 720px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1001,6 +1003,13 @@ h3 {
   filter: brightness(0.45);
 }
 
+@media (max-width: 768px) {
+  .hero__bg {
+    background-position: 40% center;
+    background-size: cover;
+  }
+}
+
 .hero__bg::after {
   content: "";
   position: absolute;
@@ -1048,7 +1057,7 @@ h3 {
 }
 
 .hero__text {
-  color: #e0e0e0;
+  color: #b0b0b0;
   font-size: 1.05rem;
   margin: 0 0 32px;
   max-width: 520px;
@@ -1104,7 +1113,12 @@ h3 {
     overscroll-behavior-x: contain;
     touch-action: pan-x;
     padding-bottom: 12px;
-    scrollbar-width: thin;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .section--dishes .dish-grid.dish-carousel::-webkit-scrollbar {
+    display: none;
   }
 
   .section--dishes .dish-carousel .dish-carousel__page {
@@ -1303,7 +1317,7 @@ h3 {
 
 @media (max-width: 768px) {
   .split {
-    padding: 80px var(--spacing-mobile);
+    padding: 100px var(--spacing-mobile);
     gap: 48px;
   }
 }
@@ -1416,7 +1430,35 @@ h3 {
 
 @media (max-width: 768px) {
   .section--contact {
-    padding-bottom: 100px;
+    padding: 80px calc(var(--spacing-mobile) * 1.3) 0;
+  }
+
+  .section--contact .eyebrow {
+    font-size: 10px;
+  }
+
+  .section--contact .section__title {
+    font-size: 1.75rem;
+  }
+
+  .info-card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .info-card__icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .info-card__title {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .info-card__body {
+    font-size: 10px;
   }
 }
 
@@ -1436,10 +1478,6 @@ h3 {
 }
 
 @media (max-width: 480px) {
-  .info-card {
-    padding: 32px 24px;
-  }
-
   .info-card__body {
     font-size: 14px;
   }
@@ -1465,10 +1503,6 @@ h3 {
 }
 
 .info-card {
-  background: var(--surface);
-  border: 1px solid #2a2a2a;
-  border-radius: 4px;
-  padding: 44px 28px;
   text-align: center;
 }
 
@@ -1818,6 +1852,8 @@ h3 {
   .page-gallery .section.section--tight {
     padding-top: 24px;
     padding-bottom: 56px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .page-gallery .section__subtitle {
@@ -2201,8 +2237,8 @@ h3 {
   }
 
   .page-order .section--order {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
@@ -2212,8 +2248,8 @@ h3 {
   }
 
   .page-order .section--order {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .order-card {
