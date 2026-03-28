@@ -2089,6 +2089,10 @@ h3 {
     padding: 18px 0;
   }
 
+  .footer .footer__accordion .menu-category__icon {
+    color: var(--text);
+  }
+
   .footer .footer__accordion .menu-category__content.open {
     padding: 0 0 12px 0 !important;
   }
