@@ -981,17 +981,13 @@ h3 {
   .page-home .hero__actions {
     flex-direction: column;
     align-items: center;
-    gap: 8px;
   }
 
-  /* Phones: smaller than global .btn — hero CTAs only */
   .page-home .hero__actions .btn {
-    width: auto;
-    max-width: min(200px, 72vw);
-    padding: 7px 14px;
-    min-height: 34px;
-    font-size: 8px;
-    letter-spacing: 0.11em;
+    width: 100%;
+    max-width: 280px;
+    padding: 9px 16px;
+    min-height: 40px;
   }
 }
 
