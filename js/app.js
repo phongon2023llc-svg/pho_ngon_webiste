@@ -6,7 +6,7 @@
     CONTACT: {
       phone: "(610) 290-7045",
       phoneTel: "+16102907045",
-      email: "hello@phongon.com",
+      email: "hello@phongonpa.com",
       addressLine: "87 E Germantown Pike, Norristown, PA",
       addressFull: "87 E Germantown Pike, Norristown, PA 19401",
       mapsEmbedQuery: "87+E+Germantown+Pike+Norristown+PA+19401",

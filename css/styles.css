@@ -996,7 +996,15 @@ h3 {
   inset: 0;
   background-size: cover;
   background-position: center;
+  background-attachment: scroll;
   filter: brightness(0.45);
+}
+
+/* Parallax: background stays fixed to the viewport while hero text scrolls (desktop / larger tablets) */
+@media (min-width: 769px) {
+  .hero__bg {
+    background-attachment: fixed;
+  }
 }
 
 /* Home hero on phones/tablets: show more of the photo (bowl, chopsticks) — cover crops too tight */
@@ -1006,7 +1014,14 @@ h3 {
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #0a0a0a;
+    background-attachment: scroll;
     filter: brightness(0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg {
+    background-attachment: scroll !important;
   }
 }
 
@@ -2046,10 +2061,16 @@ h3 {
   }
 }
 
-/* Home: fixed bottom bar (address + phone) sits above footer — keep copyright scroll-clear */
+/* Home: fixed bottom bar — enough scroll room so copyright clears bar; keep padding modest */
 @media (max-width: 900px) {
   .page-home .footer {
-    padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 480px) {
+  .page-home .footer {
+    padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
   }
 }
 
