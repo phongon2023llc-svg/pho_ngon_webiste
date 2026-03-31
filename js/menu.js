@@ -1,6 +1,28 @@
 (function () {
   "use strict";
 
+  function expandCategory(categoryEl) {
+    if (!categoryEl) return;
+    var header = categoryEl.querySelector(".menu-category__header");
+    var content = categoryEl.querySelector(".menu-category__content");
+    if (!header || !content) return;
+    header.setAttribute("aria-expanded", "true");
+    content.classList.add("open");
+  }
+
+  function expandFromHash() {
+    var id = window.location.hash.replace(/^#/, "");
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (el.classList.contains("menu-category")) {
+      expandCategory(el);
+    }
+    requestAnimationFrame(function () {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   function initMenuAccordion() {
     var headers = document.querySelectorAll("main .menu-category__header");
 
@@ -23,5 +45,8 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initMenuAccordion();
+    expandFromHash();
   });
+
+  window.addEventListener("hashchange", expandFromHash);
 })();

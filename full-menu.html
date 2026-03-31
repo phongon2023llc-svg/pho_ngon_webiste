@@ -74,9 +74,55 @@
         <p class="section__subtitle">
           Authentic Vietnamese dishes crafted with care and tradition. Serving East Norriton, Plymouth Meeting, Germantown, King of Prussia & Montgomery County. Just 5 minutes from Plymouth Meeting Mall. Dine-in, takeout, or delivery available.
         </p>
+        <p class="full-menu__hint">
+          <strong>Our Best Sellers</strong> (below) lists customer favorites by name. Other sections are <strong>collapsible</strong>—tap a title to open it. The printed <strong>House Special</strong> nine-dish grid matches <strong>Hanoi Specialties</strong> on this page.
+        </p>
+        <nav class="full-menu-toc" aria-label="Jump to menu section">
+          <span class="full-menu-toc__label">Jump to:</span>
+          <a href="#menu-best-sellers">Best Sellers</a>
+          <a href="#menu-starters">Starters</a>
+          <a href="#menu-soups">Soups</a>
+          <a href="#menu-noodle-soup">Noodle Soup</a>
+          <a href="#menu-vermicelli-entrees">Vermicelli &amp; entrées</a>
+          <a href="#menu-hanoi-specialties">Hanoi / House Special</a>
+          <a href="#menu-vegetarian">Vegetarian</a>
+          <a href="#menu-lunch-specials">Lunch Specials</a>
+          <a href="#menu-drinks">Drinks</a>
+          <a href="#menu-side-dishes">Side dishes</a>
+        </nav>
+
+        <section class="best-sellers" id="menu-best-sellers" aria-labelledby="best-sellers-heading">
+          <h2 id="best-sellers-heading" class="best-sellers__title">Our Best Sellers</h2>
+          <p class="best-sellers__lede">Customer favorites—numbers match the printed menu. Full prices and descriptions are in the sections below.</p>
+          <div class="best-sellers__list-wrap">
+            <p class="best-sellers__list-label" id="best-sellers-list-label">Popular picks</p>
+            <ol class="best-sellers__list" aria-labelledby="best-sellers-list-label">
+              <li>Summer Rolls <span class="best-sellers__num">#1</span></li>
+              <li>Hanoi Rolls <span class="best-sellers__num">#3</span></li>
+              <li>Sesame Chicken Wings <span class="best-sellers__num">#6</span></li>
+              <li>Salted Pepper Seafood <span class="best-sellers__num">#36</span></li>
+              <li>Caramelized Grilled Shrimp <span class="best-sellers__num">#5</span></li>
+              <li>Vermicelli Grilled Shrimp <span class="best-sellers__num">#30</span></li>
+              <li>Vietnamese Crepe (Bánh Xèo) <span class="best-sellers__num">#9</span></li>
+              <li>Shrimp Fried Rice <span class="best-sellers__num">#34</span></li>
+              <li>Grilled Chicken Breast <span class="best-sellers__num">#27</span></li>
+              <li>Tom Yum <span class="best-sellers__num">#47</span></li>
+              <li>Bun Chả Giò Chay <span class="best-sellers__num">#41</span></li>
+              <li>Phở Bò Tái Lăn / Smoky Beef Pho <span class="best-sellers__num">#14</span></li>
+              <li>Grilled Marinated Pork <span class="best-sellers__num">#28</span></li>
+              <li>Lemongrass Spicy Beef Pho <span class="best-sellers__num">#24</span></li>
+              <li>Crispy Egg Noodle <span class="best-sellers__num">#26</span></li>
+              <li>Grilled Chicken with Rice <span class="best-sellers__num">#27</span></li>
+              <li>Tofu Fried Rice <span class="best-sellers__num">#43</span></li>
+              <li>Stir-Fried Eggplant &amp; Veggie <span class="best-sellers__num">#46</span></li>
+              <li>Stir-Fried Soft Egg Noodle <span class="best-sellers__num">#39</span></li>
+              <li>Stir-Fried in Garlic Sauce <span class="best-sellers__num">#38</span></li>
+            </ol>
+          </div>
+        </section>
 
         <!-- Starters -->
-        <div class="menu-category">
+        <div class="menu-category" id="menu-starters">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Starters</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -90,90 +136,90 @@
               <span class="menu-item__name">Summer Rolls/Goi Cuon</span>
               <span class="menu-item__price">$7.95</span>
             </div>
-            <p class="menu-item__desc">Shrimp, pork, & vermicelli wrapped in rice paper served with special homemade peanut sauce.</p>
+            <p class="menu-item__desc">Jumbo fresh tasty shrimp, lettuce, shredded carrot &amp; vermicelli wrapped in rice paper served with special homemade peanut sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Spring Rolls/Cha Gio</span>
               <span class="menu-item__price">$7.95</span>
             </div>
-            <p class="menu-item__desc">Crispy rolls stuffed with ground pork, shrimp, onion, carrots, egg roll skin, fried until crispy golden brown and served with our homemade fish sauce or sweet & sour sauce.</p>
+            <p class="menu-item__desc">Minced pork, bean thread, mushroom, carrot wrapped in egg roll skin, fried until crispy golden brown and served with our homemade fish sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Rolls w/ Choice of Grilled Meat</span>
-              <span class="menu-item__price">$8.95</span>
+              <span class="menu-item__name">Hanoi Rolls/Goi Cuon Thit Nuong</span>
+              <span class="menu-item__price">$9.95</span>
             </div>
-            <p class="menu-item__desc">Choice of grilled chicken skewers/thighs/ Beef or Pork & vermicelli wrapped in rice paper served with our special homemade fish sauce or sweet & sour sauce.</p>
+            <p class="menu-item__desc">Choice of grilled chicken (breast/thigh), beef, or pork &amp; vermicelli lettuce wrapped in rice paper served with our homemade fish sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Chicken Satay</span>
               <span class="menu-item__price">$12.95</span>
             </div>
-            <p class="menu-item__desc">Grilled marinated Chicken skewers & grilled to perfection Served with our special peanut sauce.</p>
+            <p class="menu-item__desc">Curry infused chicken tender skewered &amp; grilled to perfection accompanied by our peanut sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Grilled Shrimp</span>
-              <span class="menu-item__price">$15.95</span>
+              <span class="menu-item__price">$13.95</span>
             </div>
-            <p class="menu-item__desc">Skewered Jumbo Shrimp marinated in lemongrass, chili salt.</p>
+            <p class="menu-item__desc">Skewered jumbo shrimp grilled in lemongrass chili salt.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Sesame Chicken Wings</span>
               <span class="menu-item__price">$12.95</span>
             </div>
-            <p class="menu-item__desc">Crispy fried chicken in our special honey house sauce, crunchy sesame seeds.</p>
+            <p class="menu-item__desc">Crispy fried chicken wings seasoned in our house sweet &amp; tangy sauce. Choice of mild or spicy.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Vietnamese Hoagies</span>
               <span class="menu-item__price">$10.95</span>
             </div>
-            <p class="menu-item__desc">Vietnamese Pork Meatloaf, Pork, Pate (Chicken Liver) Hanoi style (3 Hoagies (+2)/ crispy (+2) Crunchy Eggrolls (+2)/</p>
+            <p class="menu-item__desc">Grilled pork, chicken (breast/thigh), beef (+$1), lemongrass tofu, grilled meatball (+$2), caramelized grilled shrimp (+$2), grilled eggplant (+$2).</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Appetizer Sampler</span>
               <span class="menu-item__price">$25.95</span>
             </div>
-            <p class="menu-item__desc">Summer rolls (2) Spring Rolls(2)/Grilled Shrimp (3) and Chicken Satay (2)</p>
+            <p class="menu-item__desc">Summer rolls (2), spring rolls (2), grilled shrimp (3), and chicken satay (3).</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Banh Xeo</span>
               <span class="menu-item__price">$13.95</span>
             </div>
-            <p class="menu-item__desc">Vietnamese crepe with shrimp & roasted pork, paired with salad, herbs, and wrapped with our special homemade fish sauce.</p>
+            <p class="menu-item__desc">Vietnamese crepe with shrimp &amp; roasted pork paired with salad, herbs and sweet and sour fish sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Hanoi Spring Rolls</span>
               <span class="menu-item__price">$14.95</span>
             </div>
-            <p class="menu-item__desc">Hanoi style deep-fried spring rolls with pork, mushroom, and glass noodle, carefully wrap with Hanoi rice paper fried to golden crisp served with lettuce salad.</p>
+            <p class="menu-item__desc">Minced pork, shrimp, kohlrabi, carrot, mushroom, egg glass noodle, carefully wrapped with Hanoi rice paper fried to golden crispy served with Hanoi style fish sauce and green papaya pickles.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Beef Carpaccio/Bo Tai Chanh</span>
               <span class="menu-item__price">$14.95</span>
             </div>
-            <p class="menu-item__desc">Thinly sliced raw Angus beef marinated with lemon paired with homemade fish sauce.</p>
+            <p class="menu-item__desc">Sliced steak tossed with fresh lime juice and served with special sweet spicy sauce and mint, basil and crushed peanut.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Spicy Seafood Glass Noodle Salad</span>
               <span class="menu-item__price">$13.95</span>
             </div>
-            <p class="menu-item__desc">Steamed seafood, glass noodle, tomato, onion, celery with spicy lime dressing garnished with peanuts.</p>
+            <p class="menu-item__desc">Steamed seafood, glass noodle, tomato, onion, celery tossed with house special spicy sweet and sour fish sauce.</p>
           </div>
           </div>
         </div>
 
         <!-- Soups -->
-        <div class="menu-category">
+        <div class="menu-category" id="menu-soups">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Soups</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -187,20 +233,20 @@
               <span class="menu-item__name">Tom Yum Soup</span>
               <span class="menu-item__price">$12.50</span>
             </div>
-            <p class="menu-item__desc">Hot and sour lemongrass, galangal soup with mixed veggies and you choice of chicken, shrimp(+$1), Squid (+$2)</p>
+            <p class="menu-item__desc">Hot and sour lemongrass, galangal soup with mixed veggies and your choice of chicken, shrimp (+$1), squid (+$2).</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Wonton Soup</span>
               <span class="menu-item__price">$11.95</span>
             </div>
-            <p class="menu-item__desc">Grounded pork & shrimp wrapped in wonton wrappers served w/chicken broth and bok choy</p>
+            <p class="menu-item__desc">Ground pork &amp; shrimp wrapped in wonton wrappers served with chicken broth and bok choy.</p>
           </div>
           </div>
         </div>
 
         <!-- Noodle Soup -->
-        <div class="menu-category">
+        <div class="menu-category" id="menu-noodle-soup">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Noodle Soup</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -209,90 +255,111 @@
             </svg>
           </button>
           <div class="menu-category__content">
-          <p class="menu-category__note">Our broth is simmered from bones for 48 hours. Our Vietnamese experience a naturally sweet and clean taste rather than heavy use of spices.</p>
-          <p class="menu-category__note">Served with your choice of Beanball, and Pho (2) or sliced onion, basil, cilantro and lime served on the side and a choice of fresh bean sprouts, herb basil leaves, lime and jalapeño.</p>
+          <p class="menu-category__note">Our broth is simmered from bones for 48 hours for a naturally sweet, clean taste—balanced Vietnamese flavor rather than heavy spice.</p>
+          <p class="menu-category__note">Served with bean sprouts, basil, lime, and jalapeño on the side; pho toppings may include onion, cilantro, and scallion as listed per bowl.</p>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Chicken Pho~Pho Ga</span>
               <span class="menu-item__price">$14.95</span>
             </div>
-            <p class="menu-item__desc">Sliced white meat chicken served with rice noodle soup</p>
+            <p class="menu-item__desc">Sliced juicy white meat chicken with rice noodle soup.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Beef Pho~Pho Tai</span>
+              <span class="menu-item__price">$16.50</span>
+            </div>
+            <p class="menu-item__desc">Sliced tender steak with rice noodle soup.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row">
+              <span class="menu-item__name">Beef Ball Pho~Pho Bo Vien</span>
               <span class="menu-item__price">$15.95</span>
             </div>
-            <p class="menu-item__desc">Sliced tender steak with rice noodle soup</p>
+            <p class="menu-item__desc">Beef balls with rice noodle soup.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Special Brisket Pho~Pho Chin</span>
               <span class="menu-item__price">$15.95</span>
             </div>
-            <p class="menu-item__desc">Sliced brisket beef with rice noodle soup served Beef balls with brisket slowly cooked</p>
+            <p class="menu-item__desc">Sliced brisket with rice noodle soup.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Beef Ball Pho~Pho Bo Vien</span>
-              <span class="menu-item__price">$17.50</span>
+              <span class="menu-item__name">Brisket, Beef Balls &amp; Sliced Steak Pho</span>
+              <span class="menu-item__price">$17.95</span>
             </div>
-            <p class="menu-item__desc">Beef balls with rice noodle soup</p>
+            <p class="menu-item__desc">Brisket, beef balls, and sliced steak with rice noodle soup.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Special Hanoi's Smoky Beef Pho</span>
               <span class="menu-item__price">$17.95</span>
             </div>
-            <p class="menu-item__desc">Special tender rib-eye, infused with a smoky, aromatic flavor Served with brisket beef, Served white rice noodle, fresh herbs, lime, crispy fried onion toasted rice noodle, brisket, beef balls, tendon, chicken, bean sprouts.</p>
+            <p class="menu-item__desc">Smoky rib-eye and brisket with rice noodles, fresh herbs, lime, and crispy fried shallots.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Deluxe Pho~Pho Thuong</span>
+              <span class="menu-item__name">Deluxe Pho~Pho Dac Biet</span>
               <span class="menu-item__price">$17.95</span>
             </div>
-            <p class="menu-item__desc">Sliced steak, brisket, beef balls, tendon, chicken.</p>
+            <p class="menu-item__desc">Sliced steak, brisket, beef balls, tendon, and tripe with rice noodle soup.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row">
+              <span class="menu-item__name">Premium Pho~Pho Thuong Hang</span>
+              <span class="menu-item__price">$18.95</span>
+            </div>
+            <p class="menu-item__desc">Premium cuts and deluxe toppings with rice noodle soup.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Grilled Meat Pho</span>
               <span class="menu-item__price">$16.50</span>
             </div>
-            <p class="menu-item__desc">Grilled Pork/Chicken (breast or thigh) with rice noodle soup</p>
+            <p class="menu-item__desc">Grilled pork or chicken (breast or thigh) with rice noodle soup.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Shrimp Pho</span>
               <span class="menu-item__price">$17.95</span>
             </div>
-            <p class="menu-item__desc">Steamed jumbo shrimp, mixed vegetable with rice noodle soup</p>
+            <p class="menu-item__desc">Jumbo shrimp and mixed vegetables with rice noodle soup.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Seafood Pho</span>
               <span class="menu-item__price">$18.95</span>
             </div>
-            <p class="menu-item__desc">Mixed seafood (Shrimp, shrimp, scallops, fish balls, mixed vegetables) with rice noodle soup</p>
+            <p class="menu-item__desc">Mixed seafood (shrimp, squid, scallops, fish balls) and vegetables with rice noodle soup.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Lemongrass Spicy Pho</span>
               <span class="menu-item__price">$17.95</span>
             </div>
-            <p class="menu-item__desc">Tender sliced pork, Vietnamese pork sausage (+$1) with rice noodle with spicy lemongrass broth</p>
+            <p class="menu-item__desc">Your choice of steak, brisket, or chicken with spicy lemongrass broth; shrimp (+$1).</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Roasted Pork & Wonton Noodle Soup</span>
+              <span class="menu-item__name">Roasted Pork &amp; Wonton Noodle Soup</span>
               <span class="menu-item__price">$16.95</span>
             </div>
-            <p class="menu-item__desc">Cubed roasted pork, stuffed pork & shrimp wonton with egg noodle in chicken broth</p>
+            <p class="menu-item__desc">Cubed roasted pork and pork &amp; shrimp wonton with egg noodles in chicken broth.</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row">
+              <span class="menu-item__name">Chicken/Shrimp Egg Noodle Soup</span>
+              <span class="menu-item__price">$16.95</span>
+            </div>
+            <p class="menu-item__desc">Chicken and/or shrimp with egg noodles in broth.</p>
           </div>
           </div>
         </div>
 
         <!-- Vermicelli/Rice Bowl's & Entrees -->
-        <div class="menu-category">
+        <div class="menu-category" id="menu-vermicelli-entrees">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Vermicelli/Rice Bowl's & Entrees</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -301,96 +368,103 @@
             </svg>
           </button>
           <div class="menu-category__content">
-          <p class="menu-category__note">Chopped refreshed peanut ~ Remove upon request ~ Choice of Jasmine rice, vermicelli or Brown rice (+$1)</p>
+          <p class="menu-category__note">Chopped peanut—remove upon request. Choice of jasmine rice, vermicelli, or brown rice (+$1).</p>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Grilled Chicken</span>
               <span class="menu-item__price">$13.95</span>
             </div>
-            <p class="menu-item__desc">Breast/Thigh grilled chicken marinated in our secret sauce</p>
+            <p class="menu-item__desc">Breast or thigh grilled chicken marinated in our secret sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Grilled Pork</span>
               <span class="menu-item__price">$14.50</span>
             </div>
-            <p class="menu-item__desc">Grilled pork marinated in homemade sauce</p>
+            <p class="menu-item__desc">Grilled pork marinated in homemade sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Grilled Beef</span>
               <span class="menu-item__price">$14.95</span>
             </div>
-            <p class="menu-item__desc">Grilled beef marinated in Chef special sauce</p>
+            <p class="menu-item__desc">Grilled beef marinated in chef special sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Grilled Shrimp</span>
-              <span class="menu-item__price">$16.95</span>
+              <span class="menu-item__price">$15.95</span>
             </div>
-            <p class="menu-item__desc">Grilled jumbo shrimp marinated in Chef special sauce</p>
+            <p class="menu-item__desc">Grilled jumbo shrimp marinated in chef special sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Deluxe Grilled</span>
               <span class="menu-item__price">$18.95</span>
             </div>
-            <p class="menu-item__desc">Combination of chicken, pork, beef, and Pork</p>
+            <p class="menu-item__desc">Grilled marinated shrimp, beef, chicken, and pork.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Grilled Pork Chop</span>
               <span class="menu-item__price">$14.95</span>
             </div>
-            <p class="menu-item__desc">Grilled pork chop marinated in special sauce, served over jasmine rice</p>
+            <p class="menu-item__desc">Grilled pork chop marinated in special sauce, served over jasmine rice.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Xao Sa Saigon</span>
               <span class="menu-item__price">$16.95</span>
             </div>
-            <p class="menu-item__desc">Your choice lemongrass stir fried per fried onion, bean sprout marinate lemongrass marinate fish beef or crispy tofu & mix veggies served vermicelli or rice (+$2 seafood +$3)</p>
+            <p class="menu-item__desc">Lemongrass stir-fry with fried onion, bean sprout, and your choice of beef, chicken, or crispy tofu with mixed vegetables; served with vermicelli or rice (+$2 seafood, +$3 seafood mix).</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item__row">
+              <span class="menu-item__name">Fried Rice</span>
+              <span class="menu-item__price">$15.95</span>
+            </div>
+            <p class="menu-item__desc">Chicken, pork, beef, shrimp, or combo—jasmine rice stir-fried with egg and vegetables.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Pad Thai</span>
               <span class="menu-item__price">$14.95</span>
             </div>
-            <p class="menu-item__desc">Rice noodle, egg, bean sprouts, scallion pad thai in our secret sauce with chopped peanuts & served with a Crushed Lime</p>
+            <p class="menu-item__desc">Rice noodles, egg, bean sprouts, and scallions in pad Thai sauce with chopped peanuts; served with lime.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Lo Mein</span>
+              <span class="menu-item__name">Salted Pepper</span>
               <span class="menu-item__price">$14.95</span>
             </div>
-            <p class="menu-item__desc">Stir fried batanical Chicken/Shrimp or Squid (+$2)(Seafood +$2 Pork/Beef or Crispy Special Sauce ~ Stir Fried mix vegetables (+$2 seafood (+$3)</p>
+            <p class="menu-item__desc">Salt and pepper preparation with your choice of protein.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Shaking Beef</span>
               <span class="menu-item__price">$18.95</span>
             </div>
-            <p class="menu-item__desc">Stir fried tender juicy cubed beef with bell pepper & onion served with jasmine rice or Brown rice (+$1) or french fries (+$2)</p>
+            <p class="menu-item__desc">Stir-fried tender cubed beef with bell pepper and onion. Jasmine or brown rice (+$1), French fries (+$2), or fried rice (+$7.95).</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Stir Fried Garlic/ Basil/ Curry Sauce</span>
-              <span class="menu-item__price">$16.95</span>
+              <span class="menu-item__name">Stir Fried Garlic/Basil/Curry</span>
+              <span class="menu-item__price">$15.95</span>
             </div>
-            <p class="menu-item__desc">Stir fried choice of Batanical chicken/ tofu/ Pork/ Beef or Shrimp/+$2/ Squid/ Scallop/ seafood mix (+$3) with mix fresh vegetables, noodle with your choice of protein Your/ Beef or Shrimp/ (+$2 scallops/ (+$2 seafood (+$3)</p>
+            <p class="menu-item__desc">Stir-fried choice of chicken, tofu, pork, beef, or shrimp (+$2 squid, scallops, or seafood mix +$3) with mixed vegetables.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Pho Xao Noodle Crispy/ Saufy</span>
+              <span class="menu-item__name">Egg Noodle Crispy/Soft</span>
               <span class="menu-item__price">$16.95</span>
             </div>
-            <p class="menu-item__desc">Special with rice noodle with your choice of protein seafood mix or fresh vegetable (+$3 scallops or seafood (+$3)</p>
+            <p class="menu-item__desc">Crispy or soft egg noodles with your choice of protein, seafood mix, or vegetables (+$3).</p>
           </div>
           </div>
         </div>
 
-        <!-- Hanoi Specialties -->
-        <div class="menu-category">
+        <!-- Hanoi Specialties (same dishes as printed "House Special" grid) -->
+        <div class="menu-category" id="menu-hanoi-specialties">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Hanoi Specialties</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -399,26 +473,27 @@
             </svg>
           </button>
           <div class="menu-category__content">
+          <p class="menu-category__note">Matches the printed <strong>House Special</strong> page (nine dishes with English and Vietnamese names).</p>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Bun Cha Ha Noi</span>
               <span class="menu-item__price">$17.95</span>
             </div>
-            <p class="menu-item__desc">Hanoi style vermicelli</p>
+            <p class="menu-item__desc">Hanoi-style grilled pork with vermicelli, herbs, and dipping sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Bun Dau Mam Tom</span>
               <span class="menu-item__price">$28.95</span>
             </div>
-            <p class="menu-item__desc">Pork and tofu vermicelli</p>
+            <p class="menu-item__desc">Pork and tofu vermicelli with fermented shrimp paste.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Com Du Du Ca Kho</span>
-              <span class="menu-item__price">$16.95</span>
+              <span class="menu-item__name">Com Goi Ga (Chicken Salad w/ Rice)</span>
+              <span class="menu-item__price">$18.95</span>
             </div>
-            <p class="menu-item__desc">Catfish w/ papaya over rice</p>
+            <p class="menu-item__desc">Chicken salad served with rice.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
@@ -443,17 +518,17 @@
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Ho Tieu Xao Thap Cam</span>
+              <span class="menu-item__name">Hu Tieu Xao Thap Cam</span>
               <span class="menu-item__price">$17.95</span>
             </div>
-            <p class="menu-item__desc">Special with rice noodle</p>
+            <p class="menu-item__desc">Special wide rice noodle stir-fry.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
-              <span class="menu-item__name">Ho Tieu Ap Chao</span>
+              <span class="menu-item__name">Hu Tieu Ap Chao</span>
               <span class="menu-item__price">$18.95</span>
             </div>
-            <p class="menu-item__desc">Crispy rice noodles w/house sauce</p>
+            <p class="menu-item__desc">Crispy rice noodles with house sauce.</p>
           </div>
           <div class="menu-item">
             <div class="menu-item__row">
@@ -466,7 +541,7 @@
         </div>
 
         <!-- Vegetarian -->
-        <div class="menu-category">
+        <div class="menu-category" id="menu-vegetarian">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Vegetarian</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -528,7 +603,7 @@
         </div>
 
         <!-- Lunch Specials -->
-        <div class="menu-category">
+        <div class="menu-category" id="menu-lunch-specials">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Lunch Specials</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -537,7 +612,7 @@
             </svg>
           </button>
           <div class="menu-category__content">
-          <p class="menu-category__note">Lunch combo comes with a choice of a fresh summer roll or crispy spring roll and soft drink</p>
+          <p class="menu-category__note">Lunch combo includes your choice of a fresh summer roll or crispy spring roll, plus a soft drink (Coke, Diet Coke, Sprite, ginger ale, or similar). Thai tea (+$3).</p>
           <div class="menu-item">
             <div class="menu-item__row">
               <span class="menu-item__name">Stir-Fried w/Chicken, Pork or Tofu</span>
@@ -563,7 +638,7 @@
         </div>
 
         <!-- Drink List -->
-        <div class="menu-category">
+        <div class="menu-category" id="menu-drinks">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Drink List</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -693,7 +768,7 @@
         </div>
 
         <!-- Side Dishes -->
-        <div class="menu-category">
+        <div class="menu-category" id="menu-side-dishes">
           <button class="menu-category__header" aria-expanded="false">
             <h2 class="menu-category__title">Side Dishes</h2>
             <svg class="menu-category__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
